@@ -244,10 +244,11 @@ img { max-width: 100%; height: auto; }
 }
 
 .photo-circle img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 65%;
+  position: absolute;
+  width: 92%;
+  height: auto;
+  top: 4%;
+  left: 4%;
 }
 
 .hero-content h1 {
