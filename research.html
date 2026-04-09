@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research — Rahul Harod | IIT Bombay</title>
+  <meta name="description" content="Research interests and PhD work of Dr. Rahul Harod in Land Surface Temperature, thermal remote sensing, and machine learning applications.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">Rahul Harod</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links">
+        <a href="index.html">Welcome</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="awards.html">Awards</a>
+        <a href="education.html">Education</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <h1>Research</h1>
+    <p>Land Surface Temperature &bull; Machine Learning &bull; Thermal Remote Sensing</p>
+  </div>
+
+  <main>
+
+    <!-- RESEARCH INTERESTS -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Research Interests</h2>
+        <div class="interests-grid">
+          <div class="interest-item">All-weather Land Surface Temperature (LST) retrieval and product development</div>
+          <div class="interest-item">Passive microwave and thermal infrared data fusion using machine learning</div>
+          <div class="interest-item">Spatial downscaling of coarse-resolution LST using deep learning</div>
+          <div class="interest-item">Evapotranspiration estimation using surface energy balance models</div>
+          <div class="interest-item">Urban Heat Island (UHI) monitoring and analysis</div>
+          <div class="interest-item">Crop stress monitoring and precision agriculture applications</div>
+          <div class="interest-item">Remote sensing applications in water resource and environmental engineering</div>
+          <div class="interest-item">Carbon stock estimation and GHG accounting (soil organic carbon, dead organic matter)</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PHD RESEARCH -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Ph.D. Research</h2>
+
+        <div class="phd-highlight">
+          <h3>Thesis Title</h3>
+          <p><em>All-Weather High Spatiotemporal Resolution Land Surface Temperature Development Over India</em></p>
+          <p style="margin-top:10px; color: var(--text-muted); font-size:0.9rem;">Supervisor: Prof. Eswar Rajasekaran &nbsp;|&nbsp; IIT Bombay &nbsp;|&nbsp; Awarded: February 2026</p>
+        </div>
+
+        <div class="phd-highlight" style="margin-bottom: 32px;">
+          <h3>Motivation</h3>
+          <p>Thermal infrared satellite observations for Land Surface Temperature (LST) are limited by two fundamental challenges: cloud cover obscures nearly 60% of Earth's surface — extending to weeks or months over India during monsoon — and an inherent trade-off exists between spatial and temporal resolution across satellite platforms. My Ph.D. research systematically addresses both challenges through four interlinked objectives.</p>
+        </div>
+
+        <h3 class="subsection-title">Research Objectives</h3>
+
+        <div class="phd-objective">
+          <div class="phd-objective-header">
+            <span class="obj-badge">Objective I</span>
+            <h4>Emissivity &amp; Retrieval Algorithm Evaluation</h4>
+          </div>
+          <p>Systematic evaluation of VI-based emissivity models (NDVI, EVI, NDWI) and LST retrieval algorithms (SMWA, GSCA) for Landsat data over India. The SMWA achieved best accuracy (<strong>RMSE: 1.70 K</strong>) outperforming operational Landsat Level-2 products (RMSE: 3.52 K).</p>
+        </div>
+
+        <div class="phd-objective">
+          <div class="phd-objective-header">
+            <span class="obj-badge">Objective II</span>
+            <h4>All-Weather LST via Passive Microwave Integration</h4>
+          </div>
+          <p>A Random Forest framework integrating AMSR2 passive microwave brightness temperatures reconstructs cloud-obscured LST gaps. Validated at 12 sites across India, the model increases valid LST observations by <strong>~67%</strong>, producing a seamless 1 km daily all-weather LST product.</p>
+        </div>
+
+        <div class="phd-objective">
+          <div class="phd-objective-header">
+            <span class="obj-badge">Objective III</span>
+            <h4>Spatial Downscaling to 100 m</h4>
+          </div>
+          <p>Novel ML/deep learning models (RF, XGBoost, ANN, ResNet18, ResNet50) trained using ECOSTRESS and Landsat–Sentinel-2 data downscale MODIS LST from 1 km to 100 m. Separate models for each MODIS overpass time achieve <strong>RMSEs of 1.07–1.97 K</strong> and <strong>R² of 0.95–0.97</strong>.</p>
+        </div>
+
+        <div class="phd-objective">
+          <div class="phd-objective-header">
+            <span class="obj-badge">Objective IV</span>
+            <h4>Evapotranspiration Estimation</h4>
+          </div>
+          <p>Integration of all-weather LST into the SPARSE surface energy balance model validated at 7 eddy covariance sites across India. Monthly ET estimation improved by <strong>~27%</strong> over standard MODIS products, with gap-filled products providing <strong>53–56% more valid observations</strong>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CURRENT RESEARCH -->
+    <section class="section" style="background: var(--light-bg);">
+      <div class="container">
+        <h2 class="section-title">Current Research at Sagri Co. Ltd.</h2>
+        <div class="phd-highlight" style="background: var(--white);">
+          <h3>Carbon Credit Estimation &amp; GHG Accounting</h3>
+          <p>At Sagri Co. Ltd., I am contributing to R&amp;D on carbon credit estimation through agricultural practices, including soil organic carbon (SOC) dynamics, dead organic matter decomposition modelling using YASSO20, and RothC forward simulations under different farming scenarios. This work involves production-level, end-to-end computational workflow development in Python.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>&#169; 2026 Rahul Harod &nbsp;|&nbsp; Ph.D., IIT Bombay &nbsp;|&nbsp; rharod4@gmail.com</p>
+    <div class="footer-links">
+      <a href="https://scholar.google.com/citations?user=Qqw7c_wAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+      <a href="https://orcid.org/0009-0002-3526-6725" target="_blank" rel="noopener">ORCID</a>
+      <a href="http://www.linkedin.com/in/rahul-harod-670a47169" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/rahul-harod" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
