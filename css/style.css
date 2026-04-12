@@ -687,9 +687,12 @@ img { max-width: 100%; height: auto; }
 .research-figure img {
   width: 100%;
   height: auto;
+  max-height: 280px;
+  object-fit: contain;
   display: block;
   border-radius: var(--radius);
   border: 1px solid var(--border);
+  background: var(--light-bg);
 }
 
 .research-figure figcaption {
@@ -697,6 +700,10 @@ img { max-width: 100%; height: auto; }
   font-size: 0.82rem;
   color: var(--text-muted);
   line-height: 1.6;
+}
+
+.research-figure--wide {
+  grid-column: 1 / -1;
 }
 
 .phd-highlight h3 {
