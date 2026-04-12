@@ -674,25 +674,65 @@ img { max-width: 100%; height: auto; }
 
 /* Research Figures */
 .research-figures {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
   margin-top: 24px;
 }
 
-.research-figure {
-  margin: 0;
+/* Frame 1 — centred single frame */
+.fig-center {
+  display: flex;
+  justify-content: center;
 }
 
-.research-figure img {
+.fig-center .research-figure {
+  max-width: 62%;
+}
+
+/* Frame 2 — two side-by-side panels */
+.fig-panels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+/* The figure frame itself */
+.research-figure {
+  margin: 0;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px;
+  box-shadow: var(--shadow);
+}
+
+/* Image container inside each frame */
+.fig-img-box {
+  overflow: hidden;
+  border-radius: 3px;
+  background: var(--light-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fig-img-box img {
   width: 100%;
-  height: auto;
-  max-height: 280px;
+  height: 100%;
   object-fit: contain;
   display: block;
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
-  background: var(--light-bg);
+}
+
+/* Short frame for the wide landscape strip */
+.fig-img-box--short {
+  height: 150px;
+}
+
+/* Taller frame for the portrait magnified patches */
+.fig-img-box--tall {
+  height: 320px;
 }
 
 .research-figure figcaption {
@@ -700,10 +740,6 @@ img { max-width: 100%; height: auto; }
   font-size: 0.82rem;
   color: var(--text-muted);
   line-height: 1.6;
-}
-
-.research-figure--wide {
-  grid-column: 1 / -1;
 }
 
 .phd-highlight h3 {
@@ -1329,5 +1365,7 @@ img { max-width: 100%; height: auto; }
   .stats-grid { grid-template-columns: 1fr 1fr; }
   .hero-content h1 { font-size: 1.6rem; }
   .photo-circle { width: 120px; height: 120px; font-size: 2.2rem; }
-  .research-figures { grid-template-columns: 1fr; }
+  .fig-center .research-figure { max-width: 100%; }
+  .fig-panels { grid-template-columns: 1fr; }
+  .fig-img-box--tall { height: 260px; }
 }
