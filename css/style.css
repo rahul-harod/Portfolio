@@ -1109,6 +1109,119 @@ img { max-width: 100%; height: auto; }
 }
 
 /* ============================================
+   PMRF BLOCK (inside PhD timeline card)
+   ============================================ */
+.pmrf-block {
+  margin-top: 18px;
+  padding: 16px 18px;
+  background: rgba(26,39,68,0.04);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius);
+}
+
+.pmrf-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.pmrf-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  background: var(--primary);
+  color: var(--accent);
+  padding: 3px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.pmrf-title {
+  font-family: var(--font-heading);
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.pmrf-meta {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 2px;
+}
+
+/* ============================================
+   EXPANDABLE PANELS (details/summary)
+   ============================================ */
+.expand-panel {
+  margin-top: 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--white);
+}
+
+.expand-panel summary {
+  padding: 11px 16px;
+  cursor: pointer;
+  color: var(--secondary);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  user-select: none;
+  transition: color var(--transition);
+}
+
+.expand-panel summary::-webkit-details-marker { display: none; }
+
+.expand-panel summary::before {
+  content: '›';
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent);
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+
+.expand-panel[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.expand-panel[open] summary {
+  border-bottom: 1px solid var(--border);
+  color: var(--primary);
+}
+
+.expand-content {
+  padding: 18px 20px;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--text-dark);
+}
+
+.expand-content p { margin-bottom: 10px; }
+.expand-content p:last-child { margin-bottom: 0; }
+
+.expand-obj {
+  margin-bottom: 18px;
+}
+
+.expand-obj:last-child { margin-bottom: 0; }
+
+.expand-obj-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+/* ============================================
    PAGE HEADER BANNER
    ============================================ */
 .page-header {

@@ -37,49 +37,31 @@
   <!-- PAGE HEADER -->
   <div class="page-header">
     <h1>Education &amp; Experience</h1>
-    <p>Academic Background &bull; Professional Journey &bull; Technical Skills</p>
+    <p>Academic Background &bull; Professional Experience &bull; Technical Skills</p>
   </div>
 
   <main>
 
-    <!-- EXPERIENCE -->
+    <!-- PROFESSIONAL EXPERIENCE -->
     <section class="section">
       <div class="container">
         <h2 class="section-title">Professional Experience</h2>
         <div class="timeline">
-
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-card">
-              <span class="timeline-period">April 2026 – Present</span>
+              <span class="timeline-period">June 2025 – Present</span>
               <div class="timeline-title">Research Scientist</div>
               <div class="timeline-subtitle">Sagri Co. Ltd., Bangalore</div>
               <ul>
                 <li>R&amp;D on carbon credit estimation through agricultural practices</li>
                 <li>Soil organic carbon (SOC) dynamics and modelling</li>
-                <li>YASSO20 dead organic matter decomposition modelling</li>
+                <li>Dead organic matter decomposition modelling using YASSO20</li>
                 <li>RothC forward simulations under different farming scenarios</li>
                 <li>Production-level, end-to-end Python computational workflow development</li>
               </ul>
             </div>
           </div>
-
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-card">
-              <span class="timeline-period">November 2022 – February 2026</span>
-              <div class="timeline-title">Research Fellow (PMRF)</div>
-              <div class="timeline-subtitle">IIT Bombay, Civil Engineering Department</div>
-              <ul>
-                <li>Developed all-weather LST framework using passive microwave + machine learning</li>
-                <li>Downscaling MODIS LST from 1 km to 100 m using deep learning (ResNet18/50)</li>
-                <li>ET estimation using SPARSE surface energy balance model</li>
-                <li>Teaching Assistant for Remote Sensing, Surveying, and Photogrammetry laboratories</li>
-              </ul>
-              <div class="timeline-meta">Prime Minister's Research Fellowship (PMRF) — Cycle 9, Lateral Entry</div>
-            </div>
-          </div>
-
         </div>
       </div>
     </section>
@@ -90,6 +72,7 @@
         <h2 class="section-title">Education</h2>
         <div class="timeline">
 
+          <!-- PhD -->
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-card">
@@ -99,12 +82,56 @@
               <ul>
                 <li><strong>Thesis:</strong> All-Weather High Spatiotemporal Resolution Land Surface Temperature Development Over India</li>
                 <li><strong>Supervisor:</strong> Prof. Eswar Rajasekaran</li>
-                <li><strong>Fellowship:</strong> PMRF Awardee (Cycle 9, Lateral Entry)</li>
                 <li><strong>Viva Voce:</strong> 19 February 2026 &nbsp;|&nbsp; <strong>Degree Awarded:</strong> 28 February 2026</li>
               </ul>
+
+              <!-- PMRF badge inside PhD -->
+              <div class="pmrf-block">
+                <div class="pmrf-header">
+                  <span class="pmrf-badge">PMRF</span>
+                  <span class="pmrf-title">Research Scholar — Prime Minister's Research Fellowship</span>
+                </div>
+                <div class="pmrf-meta">May 2022 – May 2025 &nbsp;|&nbsp; Cycle 9, Lateral Entry &nbsp;|&nbsp; Ministry of Education, GoI</div>
+                <ul style="margin-top: 10px;">
+                  <li>Developed all-weather LST framework integrating passive microwave and thermal infrared data using machine learning</li>
+                  <li>Downscaling MODIS LST from 1 km to 100 m using deep learning (ResNet18/50, XGBoost, ANN)</li>
+                  <li>ET estimation using SPARSE surface energy balance model, validated at 7 eddy covariance sites</li>
+                  <li>Teaching Assistant — Remote Sensing, Advanced Surveying, and Photogrammetry Laboratories</li>
+                </ul>
+              </div>
+
+              <!-- PhD expandable -->
+              <details class="expand-panel">
+                <summary>Thesis Abstract</summary>
+                <div class="expand-content">
+                  <p>Land Surface Temperature (LST) is a critical parameter in Earth's energy budget, underpinning applications in climate monitoring, hydrology, agriculture, urban studies, and evapotranspiration estimation. Despite its importance, operational LST retrieval at high spatial and temporal resolution remains challenging due to two fundamental constraints: (i) an inherent spatial–temporal resolution trade-off across satellite platforms, and (ii) persistent cloud-induced data gaps, especially in monsoon-dominated regions like India. This thesis addresses these constraints through four interlinked research objectives.</p>
+
+                  <div class="expand-obj">
+                    <div class="expand-obj-label">Objective I — LST Retrieval &amp; Emissivity</div>
+                    <p>Evaluated VI-based emissivity models (NDVI, EVI, NDWI) and single-channel retrieval algorithms (SMWA, GSCA) for Landsat data across 8 sites in India. The Statistical Mono-Window Algorithm (SMWA) achieved RMSE of <strong>1.70 K</strong>, significantly outperforming the operational Landsat Level-2 product (RMSE: 3.52 K). Retrieval algorithm choice is more influential than emissivity model selection.</p>
+                  </div>
+
+                  <div class="expand-obj">
+                    <div class="expand-obj-label">Objective II — All-Weather LST via Passive Microwave</div>
+                    <p>A Random Forest model integrating AMSR2/AMSR-E passive microwave brightness temperatures (multiple frequencies, vertical polarization), NDVI, DEM, and spatiotemporal predictors reconstructs cloud-obscured LST gaps. Validated against MODIS/VIIRS and in-situ data at 12 sites, the model achieves RMSE of <strong>2.40–4.07 K</strong> under cloudy conditions, increasing valid LST observations by up to <strong>67%</strong> over MODIS-only data.</p>
+                  </div>
+
+                  <div class="expand-obj">
+                    <div class="expand-obj-label">Objective III — Spatial Downscaling to 100 m</div>
+                    <p>A novel ML/DL framework using ECOSTRESS and Landsat–Sentinel-2 predictors downscales MODIS LST from 1 km to 100 m. Separate time-specific models (RF, XGBoost, ANN, ResNet18, ResNet50) are trained for each MODIS overpass (Terra/Aqua Day/Night). Daytime RMSE: <strong>1.80–1.97 K</strong>; Nighttime RMSE: <strong>1.07–1.67 K</strong>; R² of <strong>0.95–0.97</strong>. ResNet18 excels for daytime; ANN demonstrates consistent performance across all overpass times.</p>
+                  </div>
+
+                  <div class="expand-obj">
+                    <div class="expand-obj-label">Objective IV — Evapotranspiration Estimation</div>
+                    <p>MODIS, PMW, and gap-filled all-weather LST are integrated into the SPARSE surface energy balance model and validated at 7 eddy covariance sites. Monthly performance shows ~<strong>27% accuracy improvement</strong> over MODIS-only products (13.12 mm/month RMSE). Gap-filled products provide <strong>53–56% more valid observations</strong>, enabling continuous operational ET monitoring for water resource management and precision agriculture.</p>
+                  </div>
+                </div>
+              </details>
+
             </div>
           </div>
 
+          <!-- M.Tech -->
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-card">
@@ -112,13 +139,44 @@
               <div class="timeline-title">M.Tech. — Civil Engineering (Remote Sensing)</div>
               <div class="timeline-subtitle">Indian Institute of Technology Bombay</div>
               <ul>
-                <li><strong>CGPA:</strong> 9.52/10</li>
-                <li><strong>Class:</strong> First Class with Distinction</li>
-                <li>Converted to Ph.D. programme upon PMRF award</li>
+                <li><strong>CGPA:</strong> 9.52 / 10 &nbsp;|&nbsp; First Class with Distinction</li>
+                <li><strong>Supervisor:</strong> Prof. Eswar Rajasekaran</li>
               </ul>
+
+              <!-- M.Tech expandable -->
+              <details class="expand-panel">
+                <summary>Projects &amp; Coursework</summary>
+                <div class="expand-content">
+
+                  <div class="expand-obj">
+                    <div class="expand-obj-label">M.Tech. Dissertation</div>
+                    <p>Development of a tool for LST retrieval from Landsat series satellites using Google Earth Engine. Work involved thermal emissivity estimation using EVI, NDWI, NDVI, and NDBI-based threshold methods; atmospheric correction using NCEP reanalysis products; and application of the Single-Channel Algorithm for LST retrieval.</p>
+                  </div>
+
+                  <div class="expand-obj">
+                    <div class="expand-obj-label">M.Tech. Credit Seminar</div>
+                    <p>Comprehensive literature review on LST retrieval from Landsat TIR data, including evaluation of temperature retrieval methods, thermal emissivity models, and global atmospheric reanalysis products. Case study on LST uncertainty propagation due to errors in atmospheric parameters, with comparison across eight global reanalysis datasets.</p>
+                  </div>
+
+                  <div class="expand-obj">
+                    <div class="expand-obj-label">Course Projects</div>
+                    <p><strong>Digital Image Processing:</strong> Supervised land cover classification using the Spectral Angle Mapper algorithm on Landsat 8 data (5 classes: water, vegetation, urban, bare land, rock mass).</p>
+                    <p style="margin-top:8px;"><strong>GIS in Civil Engineering:</strong> Optimal ambulance station location analysis for Seethampeta Mandal, Andhra Pradesh — proposed 36 stations serving 390 tribal villages within a 15-minute response time.</p>
+                    <p style="margin-top:8px;"><strong>RS &amp; GIS in Water Resources:</strong> Soil moisture estimation using the OPTRAM model with NDVI–SWIR linear regression for dry/wet edge parameterisation.</p>
+                  </div>
+
+                  <div class="expand-obj">
+                    <div class="expand-obj-label">Relevant Courses</div>
+                    <p>Remote Sensing Technologies &bull; Digital Image Processing &bull; GIS in Civil Engineering &bull; Applied Statistics &bull; Data Processing in Remote Sensing &bull; Geospatial Predictive Modelling &bull; Eco-Hydro-Climatology &bull; RS &amp; GIS in Water Resources Management</p>
+                  </div>
+
+                </div>
+              </details>
+
             </div>
           </div>
 
+          <!-- B.E. -->
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-card">
@@ -126,12 +184,12 @@
               <div class="timeline-title">B.E. — Civil Engineering</div>
               <div class="timeline-subtitle">Shri G.S. Institute of Technology &amp; Science (SGSITS), Indore</div>
               <ul>
-                <li><strong>CGPA:</strong> 7.40/10</li>
-                <li><strong>Class:</strong> First Class</li>
+                <li><strong>CGPA:</strong> 7.40 / 10 &nbsp;|&nbsp; First Class</li>
               </ul>
             </div>
           </div>
 
+          <!-- Class XII -->
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-card">
@@ -139,12 +197,12 @@
               <div class="timeline-title">Senior Secondary — Class XII</div>
               <div class="timeline-subtitle">Govt. H.S. Excellence School, Madhav Nagar, Ujjain</div>
               <ul>
-                <li><strong>Percentage:</strong> 90%</li>
-                <li><strong>Board:</strong> MPBSE</li>
+                <li><strong>Percentage:</strong> 90% &nbsp;|&nbsp; MPBSE</li>
               </ul>
             </div>
           </div>
 
+          <!-- Class X -->
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-card">
@@ -152,8 +210,7 @@
               <div class="timeline-title">Secondary — Class X</div>
               <div class="timeline-subtitle">Vivekanand High School, Barnagar, Ujjain</div>
               <ul>
-                <li><strong>Percentage:</strong> 86%</li>
-                <li><strong>Board:</strong> MPBSE</li>
+                <li><strong>Percentage:</strong> 86% &nbsp;|&nbsp; MPBSE</li>
               </ul>
             </div>
           </div>
@@ -167,16 +224,15 @@
       <div class="container">
         <h2 class="section-title">Technical Skills</h2>
         <div class="skills-grid">
-
           <div class="skill-group">
             <h4>Programming</h4>
             <div class="skill-tags">
               <span class="skill-tag">Python</span>
               <span class="skill-tag">MATLAB</span>
+              <span class="skill-tag">R</span>
               <span class="skill-tag">SQL</span>
             </div>
           </div>
-
           <div class="skill-group">
             <h4>GIS &amp; Remote Sensing</h4>
             <div class="skill-tags">
@@ -186,7 +242,6 @@
               <span class="skill-tag">ArcGIS</span>
             </div>
           </div>
-
           <div class="skill-group">
             <h4>Machine Learning</h4>
             <div class="skill-tags">
@@ -199,17 +254,16 @@
               <span class="skill-tag">ResNet</span>
             </div>
           </div>
-
           <div class="skill-group">
             <h4>Other Tools</h4>
             <div class="skill-tags">
               <span class="skill-tag">Git</span>
               <span class="skill-tag">Jupyter</span>
               <span class="skill-tag">Google Colab</span>
-              <span class="skill-tag">Generative AI (Learning)</span>
+              <span class="skill-tag">AutoCAD</span>
+              <span class="skill-tag">Streamlit</span>
             </div>
           </div>
-
         </div>
       </div>
     </section>
@@ -234,7 +288,6 @@
       <a href="https://scholar.google.com/citations?user=Qqw7c_wAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
       <a href="https://orcid.org/0009-0002-3526-6725" target="_blank" rel="noopener">ORCID</a>
       <a href="http://www.linkedin.com/in/rahul-harod-670a47169" target="_blank" rel="noopener">LinkedIn</a>
-
     </div>
   </footer>
 
