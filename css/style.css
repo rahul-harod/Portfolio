@@ -672,6 +672,33 @@ img { max-width: 100%; height: auto; }
   margin-bottom: 32px;
 }
 
+/* Research Figures */
+.research-figures {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-top: 24px;
+}
+
+.research-figure {
+  margin: 0;
+}
+
+.research-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.research-figure figcaption {
+  margin-top: 10px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
 .phd-highlight h3 {
   font-size: 1.05rem;
   color: var(--secondary);
@@ -1295,4 +1322,5 @@ img { max-width: 100%; height: auto; }
   .stats-grid { grid-template-columns: 1fr 1fr; }
   .hero-content h1 { font-size: 1.6rem; }
   .photo-circle { width: 120px; height: 120px; font-size: 2.2rem; }
+  .research-figures { grid-template-columns: 1fr; }
 }
